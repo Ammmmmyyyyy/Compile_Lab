@@ -1,0 +1,58 @@
+
+;; Function printf (printf, funcdef_no=15, decl_uid=964, cgraph_uid=16, symbol_order=15)
+
+Released 0 names, 0.00%, removed 0 holes
+__attribute__((artificial, gnu_inline, always_inline))
+__attribute__((nonnull (1), format (printf, 1, 2)))
+int printf (const char * restrict __fmt)
+{
+  int _4;
+
+  <bb 2> [local count: 1073741824]:
+  _4 = __printf_chk (1, __fmt_2(D), __builtin_va_arg_pack ());
+  return _4;
+
+}
+
+
+
+;; Function main (main, funcdef_no=23, decl_uid=2545, cgraph_uid=24, symbol_order=23) (executed once)
+
+Released 14 names, 93.33%, removed 14 holes
+int main ()
+{
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+
+  <bb 2> [local count: 118111600]:
+  __printf_chk (1, "\xe8\xaf\xb7\xe8\xbe\x93\xe5\x85\xa5\xe4\xb8\x80\xe4\xb8\xaa\xe6\x95\xb0\xe5\xad\x97\xef\xbc\x9a");
+  scanf ("%d", &n);
+  __printf_chk (1, "%d\n", 0);
+  __printf_chk (1, "%d\n", 1);
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 955630225]:
+  b_9 = a_2 + b_3;
+  __printf_chk (1, "%d\n", b_9);
+  i_10 = i_4 + 1;
+
+  <bb 4> [local count: 1073741824]:
+  # a_2 = PHI <0(2), b_3(3)>
+  # b_3 = PHI <1(2), b_9(3)>
+  # i_4 = PHI <1(2), i_10(3)>
+  n.0_1 = n;
+  if (n.0_1 > i_4)
+    goto <bb 3>; [89.00%]
+  else
+    goto <bb 5>; [11.00%]
+
+  <bb 5> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+

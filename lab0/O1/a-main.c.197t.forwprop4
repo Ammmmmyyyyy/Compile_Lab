@@ -1,0 +1,48 @@
+
+;; Function main (main, funcdef_no=23, decl_uid=2545, cgraph_uid=24, symbol_order=23) (executed once)
+
+int main ()
+{
+  int n;
+  int i;
+  int b;
+  int a;
+  int n.0_1;
+  int n.0_19;
+
+  <bb 2> [local count: 118111600]:
+  __printf_chk (1, "\xe8\xaf\xb7\xe8\xbe\x93\xe5\x85\xa5\xe4\xb8\x80\xe4\xb8\xaa\xe6\x95\xb0\xe5\xad\x97\xef\xbc\x9a");
+  scanf ("%d", &n);
+  __printf_chk (1, "%d\n", 0);
+  __printf_chk (1, "%d\n", 1);
+  n.0_19 = n;
+  if (n.0_19 > 1)
+    goto <bb 5>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 5> [local count: 105119324]:
+
+  <bb 3> [local count: 955630225]:
+  # a_20 = PHI <b_21(6), 0(5)>
+  # b_21 = PHI <b_9(6), 1(5)>
+  # i_22 = PHI <i_10(6), 1(5)>
+  b_9 = a_20 + b_21;
+  __printf_chk (1, "%d\n", b_9);
+  i_10 = i_22 + 1;
+  n.0_1 = n;
+  if (n.0_1 > i_10)
+    goto <bb 6>; [89.00%]
+  else
+    goto <bb 4>; [11.00%]
+
+  <bb 6> [local count: 850510901]:
+  goto <bb 3>; [100.00%]
+
+  <bb 4> [local count: 118111600]:
+  n ={v} {CLOBBER};
+  return 0;
+
+}
+
+
